@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nhu-Dat Cao — Data Engineer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">Dat Cao</span>
+      <ul class="nav-links">
+        <li><a href="#about"        data-en="About"        data-vi="Giới thiệu">About</a></li>
+        <li><a href="#experience"   data-en="Experience"   data-vi="Kinh nghiệm">Experience</a></li>
+        <li><a href="#skills"       data-en="Skills"       data-vi="Kỹ năng">Skills</a></li>
+        <li><a href="#projects"     data-en="Projects"     data-vi="Dự án">Projects</a></li>
+        <li><a href="#education"    data-en="Education"    data-vi="Học vấn">Education</a></li>
+        <li><a href="#achievements" data-en="Achievements" data-vi="Thành tích">Achievements</a></li>
+        <li><a href="#contact" class="nav-cta" data-en="Contact" data-vi="Liên hệ">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">EN</button>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">☀️</button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="about" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting" data-en="Hello, I'm" data-vi="Xin chào, tôi là">Hello, I'm</p>
+        <h1 class="hero-name">Nhu-Dat Cao <span class="hero-nickname">(Dat)</span></h1>
+        <h2 class="hero-role">
+          <span class="typed" id="typed-text"></span><span class="cursor">|</span>
+        </h2>
+        <p class="hero-bio"
+          data-en="Data Engineer with 3+ years of experience specialising in ETL pipelines, distributed data processing, and cloud data infrastructure. Currently pursuing an MSc in Data &amp; Computer Science at Heidelberg University under a DAAD scholarship."
+          data-vi="Kỹ sư dữ liệu với hơn 3 năm kinh nghiệm chuyên về ETL pipeline, xử lý dữ liệu phân tán và hạ tầng dữ liệu đám mây. Hiện đang theo học thạc sĩ Khoa học Dữ liệu &amp; Máy tính tại Đại học Heidelberg theo học bổng DAAD.">
+          Data Engineer with 3+ years of experience specialising in ETL pipelines, distributed data processing, and cloud data infrastructure. Currently pursuing an MSc in Data &amp; Computer Science at Heidelberg University under a DAAD scholarship.
+        </p>
+        <div class="hero-btns">
+          <a href="#experience" class="btn btn-primary" data-en="View Experience" data-vi="Xem Kinh Nghiệm">View Experience</a>
+          <a href="#contact" class="btn btn-outline" data-en="Get in Touch" data-vi="Liên Hệ Ngay">Get in Touch</a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge" data-en="Databricks Certified Professional" data-vi="Chứng chỉ Databricks">Databricks Certified Professional</span>
+          <span class="badge" data-en="Azure Data Engineer" data-vi="Azure Data Engineer">Azure Data Engineer</span>
+          <span class="badge" data-en="DAAD Scholar" data-vi="Học Bổng DAAD">DAAD Scholar</span>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num" data-target="3">0</span>
+            <span class="stat-label" data-en="Years Exp." data-vi="Năm KN">Years Exp.</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="6">0</span>
+            <span class="stat-label" data-en="Projects" data-vi="Dự Án">Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="5">0</span>
+            <span class="stat-label" data-en="Certifications" data-vi="Chứng Chỉ">Certifications</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring">
+          <img src="assets/profile.jpg" alt="Nhu-Dat Cao" class="hero-photo" />
+        </div>
+        <div class="hero-photo-blob"></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span data-en="Scroll" data-vi="Cuộn">Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title" data-number="01" data-en="Work Experience" data-vi="Kinh Nghiệm Làm Việc">Work Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Oct 2023 — Mar 2026</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3 data-en="Senior Data Engineer" data-vi="Kỹ Sư Dữ Liệu Cao Cấp">Senior Data Engineer</h3>
+              <span class="company-tag">Hitachi Digital Services · Vietnam Delivery Center</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Developed automated Databricks batch/streaming workflows processing <strong>100 GB+ daily (~15M records/day)</strong> using PySpark and Medallion Architecture on Azure, doubling speed and cutting DBU costs by 50%.</li>
+              <li>Designed and optimised Pentaho flows and PostgreSQL queries for complex financial reporting, improving execution by <strong>2–5×</strong>.</li>
+              <li>Delivered insights via SSRS and Qlik Sense dashboards for cross-cultural stakeholders.</li>
+              <li>Collaborated with BA, DA, PM, and DS roles to design data models, implement CDC via Delta Live Tables, and introduce Auto Loader for incremental ingestion.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">PySpark</span><span class="tag">Databricks</span><span class="tag">Azure</span><span class="tag">Medallion Architecture</span><span class="tag">Pentaho</span><span class="tag">Qlik Sense</span><span class="tag">Delta Live Tables</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Mar 2023 — Aug 2023</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3 data-en="Data Engineer" data-vi="Kỹ Sư Dữ Liệu">Data Engineer</h3>
+              <span class="company-tag">Viettel Big Data Analytics Center · Viettel Telecom</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Built data pipelines for user logs and content using HDFS, Spark, and Pentaho, supporting Recommendation System algorithms.</li>
+              <li>Designed schemas in PostgreSQL, Elasticsearch, and Redis, improving retrieval speed and system scalability.</li>
+              <li>Installed and operated Elasticsearch, Kibana, Redis, and Kafka on testing servers.</li>
+              <li>Conducted acceptance testing for Backend (Java SpringBoot) and Frontend (ReactJS) components.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Spark</span><span class="tag">HDFS</span><span class="tag">Elasticsearch</span><span class="tag">Redis</span><span class="tag">Kafka</span><span class="tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Aug 2022 — Feb 2023</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3 data-en="Data Engineer / Analyst" data-vi="Kỹ Sư / Phân Tích Dữ Liệu">Data Engineer / Analyst</h3>
+              <span class="company-tag">Rocket Game Studio</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>As a founding data team member, built a full data platform for collection, storage, processing, and visualisation using Python, NodeJS, MongoDB, Redis, Kafka, Docker, Elasticsearch &amp; Kibana.</li>
+              <li>Managed migration of game data from Firebase to Google BigQuery; visualised results in Looker Studio for Marketing insights.</li>
+              <li>Optimised MySQL-based HR data processing for timekeeping records.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">BigQuery</span><span class="tag">Looker Studio</span><span class="tag">MongoDB</span><span class="tag">Kafka</span><span class="tag">Docker</span><span class="tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Aug 2020 — Aug 2022</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3 data-en="Research Assistant" data-vi="Trợ Lý Nghiên Cứu">Research Assistant</h3>
+              <span class="company-tag">AIoT Lab, MSO Lab · HUST</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Applied deep learning and reinforcement learning to Multipath-TCP Scheduling problems in 5G networks.</li>
+              <li>Researched Genetic Algorithm (GA) and optimisation techniques.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Deep Learning</span><span class="tag">Reinforcement Learning</span><span class="tag">Genetic Algorithm</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-number="02" data-en="Technical Skills" data-vi="Kỹ Năng Kỹ Thuật">Technical Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-icon">⚡</div>
+          <h4 data-en="Languages" data-vi="Ngôn ngữ">Languages</h4>
+          <div class="skill-tags">
+            <span class="stag">Python</span><span class="stag">Java</span><span class="stag">Scala</span><span class="stag">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🔧</div>
+          <h4 data-en="Big Data Frameworks" data-vi="Khung Big Data">Big Data Frameworks</h4>
+          <div class="skill-tags">
+            <span class="stag">Apache Spark</span><span class="stag">Hadoop</span><span class="stag">Kafka</span><span class="stag">Airflow</span><span class="stag">Pentaho</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">☁️</div>
+          <h4 data-en="Cloud &amp; Platforms" data-vi="Cloud &amp; Nền tảng">Cloud &amp; Platforms</h4>
+          <div class="skill-tags">
+            <span class="stag">Microsoft Azure</span><span class="stag">Databricks</span><span class="stag">GCP</span><span class="stag">AWS</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🗄️</div>
+          <h4 data-en="Databases" data-vi="Cơ sở dữ liệu">Databases</h4>
+          <div class="skill-tags">
+            <span class="stag">PostgreSQL</span><span class="stag">SQL Server</span><span class="stag">BigQuery</span><span class="stag">MongoDB</span><span class="stag">Elasticsearch</span><span class="stag">Redis</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <h4 data-en="BI &amp; Visualisation" data-vi="BI &amp; Trực quan hóa">BI &amp; Visualisation</h4>
+          <div class="skill-tags">
+            <span class="stag">Qlik Sense</span><span class="stag">SSRS</span><span class="stag">Looker Studio</span><span class="stag">Kibana</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🤖</div>
+          <h4 data-en="AI / ML" data-vi="Trí tuệ nhân tạo / ML">AI / ML</h4>
+          <div class="skill-tags">
+            <span class="stag">Machine Learning</span><span class="stag">NLP</span><span class="stag">Deep Learning</span><span class="stag">TensorFlow</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title" data-number="03" data-en="Personal Projects" data-vi="Dự Án Cá Nhân">Personal Projects</h2>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all" data-en="All" data-vi="Tất cả">All</button>
+        <button class="filter-btn" data-filter="python" data-en="Python" data-vi="Python">Python</button>
+        <button class="filter-btn" data-filter="spark" data-en="Spark" data-vi="Spark">Spark</button>
+        <button class="filter-btn" data-filter="nlp" data-en="NLP" data-vi="NLP">NLP</button>
+        <button class="filter-btn" data-filter="ml" data-en="ML" data-vi="ML">ML</button>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card" data-tags="spark hdfs elasticsearch python">
+          <div class="project-top">
+            <span class="project-icon">📰</span>
+            <h3 data-en="Trend Analysis System" data-vi="Hệ Thống Phân Tích Xu Hướng">Trend Analysis System</h3>
+          </div>
+          <p data-en="Big Data platform for trend analysis from large online news datasets using Scrapy, Spark, and HDFS. Built Elasticsearch data warehouse with Flask + ReactJS interfaces."
+             data-vi="Nền tảng Big Data phân tích xu hướng từ tập dữ liệu tin tức trực tuyến lớn sử dụng Scrapy, Spark và HDFS. Xây dựng kho dữ liệu Elasticsearch với giao diện Flask + ReactJS.">
+            Big Data platform for trend analysis from large online news datasets using Scrapy, Spark, and HDFS. Built Elasticsearch data warehouse with Flask + ReactJS interfaces.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Scrapy</span><span class="tag">Spark</span><span class="tag">HDFS</span><span class="tag">Elasticsearch</span><span class="tag">Flask</span><span class="tag">ReactJS</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="python mongodb bigquery">
+          <div class="project-top">
+            <span class="project-icon">🎮</span>
+            <h3 data-en="Game Data Platform" data-vi="Nền Tảng Dữ Liệu Game">Game Data Platform</h3>
+          </div>
+          <p data-en="Integrated platform for managing and processing gamer behaviour data using Python, Redis, MongoDB, BigQuery, and Looker for advanced visualisation."
+             data-vi="Nền tảng tích hợp quản lý và xử lý dữ liệu hành vi game thủ sử dụng Python, Redis, MongoDB, BigQuery và Looker để trực quan hóa nâng cao.">
+            Integrated platform for managing and processing gamer behaviour data using Python, Redis, MongoDB, BigQuery, and Looker for advanced visualisation.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">Redis</span><span class="tag">MongoDB</span><span class="tag">BigQuery</span><span class="tag">Looker</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="spark nlp">
+          <div class="project-top">
+            <span class="project-icon">₿</span>
+            <h3 data-en="Coin–Twitter Correlation" data-vi="Tương Quan Coin–Twitter">Coin–Twitter Correlation</h3>
+          </div>
+          <p data-en="Lambda architecture system correlating Binance crypto transactions with Twitter sentiment in real-time using Spark Streaming, HDFS, and Cassandra."
+             data-vi="Hệ thống kiến trúc Lambda tương quan giao dịch crypto Binance với cảm xúc Twitter theo thời gian thực sử dụng Spark Streaming, HDFS và Cassandra.">
+            Lambda architecture system correlating Binance crypto transactions with Twitter sentiment in real-time using Spark Streaming, HDFS, and Cassandra.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Spark Streaming</span><span class="tag">Lambda Arch</span><span class="tag">Cassandra</span><span class="tag">HDFS</span><span class="tag">NLP</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="nlp python ml">
+          <div class="project-top">
+            <span class="project-icon">🎵</span>
+            <h3 data-en="Spotify Sentiment Analysis" data-vi="Phân Tích Cảm Xúc Spotify">Spotify Sentiment Analysis</h3>
+          </div>
+          <p data-en="NLP-based sentiment analysis of Spotify app reviews integrating RNN, LSTM, GRU, Bi-LSTM, and Transformer models built with Python and TensorFlow."
+             data-vi="Phân tích cảm xúc dựa trên NLP từ đánh giá ứng dụng Spotify tích hợp các mô hình RNN, LSTM, GRU, Bi-LSTM và Transformer xây dựng bằng Python và TensorFlow.">
+            NLP-based sentiment analysis of Spotify app reviews integrating RNN, LSTM, GRU, Bi-LSTM, and Transformer models built with Python and TensorFlow.
+          </p>
+          <div class="tag-row">
+            <span class="tag">NLP</span><span class="tag">TensorFlow</span><span class="tag">LSTM</span><span class="tag">Transformer</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="python airflow aws">
+          <div class="project-top">
+            <span class="project-icon">💹</span>
+            <h3 data-en="Finance Mini Platform" data-vi="Nền Tảng Tài Chính Mini">Finance Mini Platform</h3>
+          </div>
+          <p data-en="Streamlined financial data collection, storage, and analysis pipeline using Python, Airflow for orchestration, and AWS Cloud services for scalable infrastructure."
+             data-vi="Pipeline thu thập, lưu trữ và phân tích dữ liệu tài chính sử dụng Python, Airflow để điều phối và dịch vụ AWS Cloud cho hạ tầng có thể mở rộng.">
+            Streamlined financial data collection, storage, and analysis pipeline using Python, Airflow for orchestration, and AWS Cloud services for scalable infrastructure.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">Airflow</span><span class="tag">AWS</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="python ml">
+          <div class="project-top">
+            <span class="project-icon">🎬</span>
+            <h3 data-en="Movie Recommendation System" data-vi="Hệ Thống Gợi Ý Phim">Movie Recommendation System</h3>
+          </div>
+          <p data-en="Personalised movie recommendation engine using Regression, KNN, and SGD models in Python, improving search results and recommendation accuracy."
+             data-vi="Công cụ gợi ý phim cá nhân hóa sử dụng mô hình Regression, KNN và SGD bằng Python, cải thiện kết quả tìm kiếm và độ chính xác gợi ý.">
+            Personalised movie recommendation engine using Regression, KNN, and SGD models in Python, improving search results and recommendation accuracy.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">KNN</span><span class="tag">SGD</span><span class="tag">Regression</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-number="04" data-en="Education" data-vi="Học Vấn">Education</h2>
+      <div class="edu-grid">
+
+        <div class="edu-card edu-card--featured">
+          <div class="edu-year">2026 — Present</div>
+          <h3 data-en="MSc Data and Computer Science" data-vi="Thạc Sĩ Khoa Học Dữ Liệu &amp; Máy Tính">MSc Data and Computer Science</h3>
+          <p class="edu-school" data-en="Heidelberg University, Germany" data-vi="Đại học Heidelberg, Đức">Heidelberg University, Germany</p>
+          <p class="edu-note" data-en="49th Global · THE World University Rankings 2026 · DAAD Scholarship" data-vi="Hạng 49 Toàn Cầu · THE World University Rankings 2026 · Học Bổng DAAD">49th Global · THE World University Rankings 2026 · DAAD Scholarship</p>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-year">2019 — 2023</div>
+          <h3 data-en="BSc Computer Science — Talented Program" data-vi="Cử Nhân Khoa Học Máy Tính — Chương Trình Tài Năng">BSc Computer Science — Talented Program</h3>
+          <p class="edu-school" data-en="Hanoi University of Science and Technology" data-vi="Đại học Bách khoa Hà Nội">Hanoi University of Science and Technology</p>
+          <p class="edu-note" data-en="GPA 3.80 / 4.0 · 2nd in CS Vietnam (QS Ranking)" data-vi="GPA 3.80 / 4.0 · Hạng 2 KHMT Việt Nam (QS Ranking)">GPA 3.80 / 4.0 · 2nd in CS Vietnam (QS Ranking)</p>
+          <p class="edu-courses" data-en="Bigdata Storage &amp; Processing · Deep Learning · Software Design &amp; Construction" data-vi="Lưu Trữ &amp; Xử Lý Big Data · Deep Learning · Thiết Kế &amp; Xây Dựng Phần Mềm">Bigdata Storage &amp; Processing · Deep Learning · Software Design &amp; Construction</p>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-year">2016 — 2019</div>
+          <h3 data-en="Mathematics Specialised" data-vi="Chuyên Toán">Mathematics Specialised</h3>
+          <p class="edu-school" data-en="Le Hong Phong High School for the Gifted" data-vi="THPT Chuyên Lê Hồng Phong">Le Hong Phong High School for the Gifted</p>
+          <p class="edu-note">GPA 8.7 / 10</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <h2 class="section-title" data-number="05" data-en="Achievements &amp; Certifications" data-vi="Thành Tích &amp; Chứng Chỉ">Achievements &amp; Certifications</h2>
+      <div class="ach-grid">
+
+        <div class="ach-card ach-card--gold">
+          <div class="ach-icon">🏆</div>
+          <h4 data-en="DAAD Scholarship 2025–2026" data-vi="Học Bổng DAAD 2025–2026">DAAD Scholarship 2025–2026</h4>
+          <p data-en="Highly competitive DAAD scholarship for STEM disciplines supporting Master studies in Germany." data-vi="Học bổng DAAD cạnh tranh cao dành cho lĩnh vực STEM hỗ trợ chương trình thạc sĩ tại Đức.">Highly competitive DAAD scholarship for STEM disciplines supporting Master studies in Germany.</p>
+        </div>
+
+        <div class="ach-card ach-card--gold">
+          <div class="ach-icon">🥇</div>
+          <h4 data-en="Golden Prize — Vietnam Math Olympiad 2023" data-vi="Giải Vàng — Olympic Toán Việt Nam 2023">Golden Prize — Vietnam Math Olympiad 2023</h4>
+          <p data-en="National university competition · Algebra · Ranked 6th out of 161 contestants." data-vi="Kỳ thi cấp quốc gia bậc đại học · Đại số · Xếp hạng 6 / 161 thí sinh.">National university competition · Algebra · Ranked 6th out of 161 contestants.</p>
+        </div>
+
+        <div class="ach-card ach-card--gold">
+          <div class="ach-icon">🥈</div>
+          <h4 data-en="Consolation Prize — Vietnam Math Olympiad 2019" data-vi="Giải Khuyến Khích — Olympic Toán Việt Nam 2019">Consolation Prize — Vietnam Math Olympiad 2019</h4>
+          <p data-en="National high school competition specialising in mathematics." data-vi="Kỳ thi cấp quốc gia THPT chuyên toán.">National high school competition specialising in mathematics.</p>
+        </div>
+
+        <div class="ach-card ach-card--gold">
+          <div class="ach-icon">🥇</div>
+          <h4 data-en="Golden Prize — Northern Math Competition 2017" data-vi="Giải Vàng — Kỳ Thi Toán Phía Bắc 2017">Golden Prize — Northern Math Competition 2017</h4>
+          <p data-en="Northern high school mathematics competition." data-vi="Kỳ thi toán học THPT khu vực phía Bắc.">Northern high school mathematics competition.</p>
+        </div>
+
+        <div class="ach-card ach-card--cert">
+          <div class="ach-icon">🔷</div>
+          <h4 data-en="Databricks Certified Data Engineer Professional" data-vi="Chứng Chỉ Kỹ Sư Dữ Liệu Databricks">Databricks Certified Data Engineer Professional</h4>
+          <p data-en="Associated with Hitachi Digital Services." data-vi="Liên kết với Hitachi Digital Services.">Associated with Hitachi Digital Services.</p>
+        </div>
+
+        <div class="ach-card ach-card--cert">
+          <div class="ach-icon">☁️</div>
+          <h4 data-en="Microsoft Certified: Azure Data Engineer Associate" data-vi="Microsoft Certified: Azure Data Engineer Associate">Microsoft Certified: Azure Data Engineer Associate</h4>
+          <p data-en="Associated with Hitachi Digital Services." data-vi="Liên kết với Hitachi Digital Services.">Associated with Hitachi Digital Services.</p>
+        </div>
+
+        <div class="ach-card ach-card--cert">
+          <div class="ach-icon">🗃️</div>
+          <h4 data-en="Microsoft Certified: Azure Database Administrator" data-vi="Microsoft Certified: Azure Database Administrator">Microsoft Certified: Azure Database Administrator</h4>
+          <p data-en="Associated with Hitachi Digital Services." data-vi="Liên kết với Hitachi Digital Services.">Associated with Hitachi Digital Services.</p>
+        </div>
+
+        <div class="ach-card ach-card--cert">
+          <div class="ach-icon">📊</div>
+          <h4 data-en="Google Data Analytics Certificate" data-vi="Chứng Chỉ Google Data Analytics">Google Data Analytics Certificate</h4>
+          <p data-en="Online certification." data-vi="Chứng chỉ trực tuyến.">Online certification.</p>
+        </div>
+
+        <div class="ach-card ach-card--cert">
+          <div class="ach-icon">🧩</div>
+          <h4 data-en="SQL Advanced Certificate — HackerRank" data-vi="Chứng Chỉ SQL Nâng Cao — HackerRank">SQL Advanced Certificate — HackerRank</h4>
+          <p data-en="Online certification." data-vi="Chứng chỉ trực tuyến.">Online certification.</p>
+        </div>
+
+        <div class="ach-card ach-card--gold">
+          <div class="ach-icon">🎖️</div>
+          <h4 data-en="Outstanding Graduate — HUST" data-vi="Tốt Nghiệp Xuất Sắc — BKHN">Outstanding Graduate — HUST</h4>
+          <p data-en="Excellent classification · Conduct score above 90/100." data-vi="Xếp loại xuất sắc · Điểm rèn luyện trên 90/100.">Excellent classification · Conduct score above 90/100.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-number="06" data-en="Get in Touch" data-vi="Liên Hệ">Get in Touch</h2>
+      <p class="contact-sub"
+        data-en="I'm open to new opportunities, collaborations, or just a chat about data engineering."
+        data-vi="Tôi luôn sẵn sàng cho các cơ hội mới, hợp tác, hoặc chỉ là trò chuyện về kỹ thuật dữ liệu.">
+        I'm open to new opportunities, collaborations, or just a chat about data engineering.
+      </p>
+      <div class="contact-cards">
+        <a class="contact-card" href="mailto:canada2k1@gmail.com">
+          <span class="contact-icon">✉️</span>
+          <span class="contact-label" data-en="Email" data-vi="Email">Email</span>
+          <span class="contact-value">canada2k1@gmail.com</span>
+        </a>
+        <a class="contact-card" href="tel:+4917470999941">
+          <span class="contact-icon">📞</span>
+          <span class="contact-label" data-en="Phone" data-vi="Điện thoại">Phone</span>
+          <span class="contact-value">(+49) 174 7099941</span>
+        </a>
+        <a class="contact-card" href="https://github.com/datcn1212" target="_blank" rel="noopener">
+          <span class="contact-icon">💻</span>
+          <span class="contact-label" data-en="GitHub" data-vi="GitHub">GitHub</span>
+          <span class="contact-value">datcn1212</span>
+        </a>
+        <a class="contact-card" href="https://linkedin.com/in/caonhudat1212" target="_blank" rel="noopener">
+          <span class="contact-icon">🔗</span>
+          <span class="contact-label" data-en="LinkedIn" data-vi="LinkedIn">LinkedIn</span>
+          <span class="contact-value">caonhudat1212</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p data-en="© 2026 Nhu-Dat Cao" data-vi="© 2026 Nhu-Dat Cao">© 2026 Nhu-Dat Cao</p>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
